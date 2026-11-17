@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="980" viewBox="0 0 1200 980" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif">
+  <defs>
+    <style>
+      .t { fill: #1f2937; }
+      .s { fill: #6b7280; }
+      .small { font-size: 13px; }
+      .note { font-size: 12.5px; fill: #dc2626; font-weight: 700; }
+      .mono { font-family: 'Cascadia Mono','Consolas',monospace; }
+    </style>
+    <filter id="card" x="-8%" y="-8%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.07"/>
+    </filter>
+    <filter id="menu" x="-10%" y="-8%" width="120%" height="118%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="980" fill="#f7f8fa"/>
+
+  <!-- Header -->
+  <text x="60" y="62" fill="#1f2937" font-size="34" font-weight="700">在 DSH 里点几下就够了</text>
+  <text x="60" y="94" fill="#6b7280" font-size="15">装好并重启 DSH 之后，按下面三步点。红圈是「点这里」，数字是顺序。</text>
+
+  <!-- ===== Panel 1 ===== -->
+  <text x="76" y="146" fill="#1f2937" font-size="16" font-weight="700">新建会话 · 空状态</text>
+  <rect x="60" y="160" width="340" height="440" rx="14" fill="#ffffff" stroke="#e5e7eb" filter="url(#card)"/>
+  <rect x="76" y="176" width="308" height="334" rx="10" fill="#f8fafc" stroke="#e8edf3"/>
+
+  <text x="230" y="292" text-anchor="middle" fill="#9aa8b8" font-size="13">有什么可以帮你的？</text>
+
+  <rect x="100" y="320" width="260" height="62" rx="12" fill="#ffffff" stroke="#dbe3ec"/>
+  <text x="116" y="346" fill="#b9c4d2" font-size="11">描述你想构建的内容，/ 调用指令，@ 文件…</text>
+  <circle cx="338" cy="360" r="12" fill="#dbeafe"/>
+  <path d="M 338 354 L 338 366 M 332 360 L 344 360" stroke="#93b4f7" stroke-width="2" stroke-linecap="round"/>
+
+  <rect x="96" y="404" width="56" height="24" rx="12" fill="#ffffff" stroke="#dbe3ec"/>
+  <text x="124" y="420" text-anchor="middle" fill="#8b98a8" font-size="10.5">完全权限</text>
+  <rect x="158" y="404" width="42" height="24" rx="12" fill="#ffffff" stroke="#dbe3ec"/>
+  <text x="179" y="420" text-anchor="middle" fill="#8b98a8" font-size="10.5">能动性</text>
+
+  <rect x="212" y="404" width="104" height="24" rx="12" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="264" y="420" text-anchor="middle" fill="#2563eb" font-size="10.5" font-weight="700">身份：未导入 ▾</text>
+
+  <rect x="204" y="396" width="120" height="40" rx="20" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="7 4"/>
+  <circle cx="326" cy="396" r="14" fill="#ef4444"/>
+  <text x="326" y="401" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">1</text>
+
+  <text x="96" y="540" class="note">点这个「身份」胶囊</text>
+  <text x="96" y="562" fill="#6b7280" font-size="11.5">默认长这样 → 说明这个会话还没接任何身份。</text>
+  <text x="96" y="584" fill="#6b7280" font-size="11.5">看不到它？没装插件，或没完全重启 DSH。</text>
+
+  <!-- ===== Panel 2 ===== -->
+  <text x="436" y="146" fill="#1f2937" font-size="16" font-weight="700">展开菜单 · 先选档，再选题</text>
+  <rect x="420" y="160" width="340" height="440" rx="14" fill="#ffffff" stroke="#e5e7eb" filter="url(#card)"/>
+  <rect x="436" y="176" width="308" height="334" rx="10" fill="#f8fafc" stroke="#e8edf3"/>
+
+  <rect x="470" y="188" width="246" height="298" rx="10" fill="#ffffff" stroke="#e5e7eb" filter="url(#menu)"/>
+
+  <text x="486" y="210" fill="#94a3b8" font-size="10" font-weight="700">强度</text>
+
+  <circle cx="492" cy="230" r="4.5" fill="none" stroke="#cbd5e1" stroke-width="1.8"/>
+  <text x="504" y="234" fill="#6b7280" font-size="11">底色 tone</text>
+
+  <rect x="474" y="242" width="238" height="26" rx="6" fill="#eff6ff"/>
+  <circle cx="492" cy="255" r="4.5" fill="#2563eb"/>
+  <text x="504" y="259" fill="#1e40af" font-size="11" font-weight="700">画像 portrait</text>
+
+  <circle cx="492" cy="280" r="4.5" fill="none" stroke="#cbd5e1" stroke-width="1.8"/>
+  <text x="504" y="284" fill="#6b7280" font-size="11">替身 standin</text>
+
+  <line x1="482" y1="298" x2="704" y2="298" stroke="#eef2f6" stroke-width="1"/>
+
+  <text x="486" y="316" fill="#94a3b8" font-size="10" font-weight="700">身份</text>
+
+  <rect x="486" y="326" width="10" height="10" rx="2" fill="#2563eb"/>
+  <path d="M 488.5 331.2 L 490.5 333.2 L 494.5 328.2" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <text x="504" y="335" fill="#1f2937" font-size="11" font-weight="700">小鲸 · 画像</text>
+  <text x="696" y="335" text-anchor="end" fill="#cbd5e1" font-size="11">✕</text>
+
+  <rect x="486" y="348" width="10" height="10" rx="2" fill="none" stroke="#cbd5e1" stroke-width="1.4"/>
+  <text x="504" y="357" fill="#6b7280" font-size="11">阿May</text>
+  <text x="696" y="357" text-anchor="end" fill="#cbd5e1" font-size="11">✕</text>
+
+  <line x1="482" y1="374" x2="704" y2="374" stroke="#eef2f6" stroke-width="1"/>
+
+  <rect x="486" y="384" width="10" height="10" rx="2" fill="#2563eb"/>
+  <path d="M 488.5 389.2 L 490.5 391.2 L 494.5 386.2" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <text x="504" y="393" fill="#1f2937" font-size="11">带记忆</text>
+  <rect x="556" y="384" width="10" height="10" rx="2" fill="none" stroke="#cbd5e1" stroke-width="1.4"/>
+  <text x="574" y="393" fill="#9aa8b8" font-size="11">带锚点</text>
+
+  <line x1="482" y1="408" x2="704" y2="408" stroke="#eef2f6" stroke-width="1"/>
+  <text x="486" y="428" fill="#6b7280" font-size="11">从头开始（不接身份）</text>
+
+  <text x="486" y="456" fill="#9aa8b8" font-size="10">✕ = 删除这张卡</text>
+  <text x="486" y="472" fill="#9aa8b8" font-size="10">换档只换注入，不重新提炼</text>
+
+  <circle cx="726" cy="255" r="14" fill="#ef4444"/>
+  <text x="726" y="260" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">2</text>
+  <circle cx="726" cy="335" r="14" fill="#ef4444"/>
+  <text x="726" y="340" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">3</text>
+
+  <text x="450" y="540" class="note">② 先选强度档　③ 再选身份卡</text>
+  <text x="450" y="562" fill="#6b7280" font-size="11.5">点完立刻生效，没有「确定」按钮。</text>
+  <text x="450" y="584" fill="#6b7280" font-size="11.5">「带记忆」只有画像 / 替身档才有用。</text>
+
+  <!-- ===== Panel 3 ===== -->
+  <text x="796" y="146" fill="#1f2937" font-size="16" font-weight="700">选好之后 · 直接聊</text>
+  <rect x="780" y="160" width="340" height="440" rx="14" fill="#ffffff" stroke="#e5e7eb" filter="url(#card)"/>
+  <rect x="796" y="176" width="308" height="334" rx="10" fill="#f8fafc" stroke="#e8edf3"/>
+
+  <text x="950" y="292" text-anchor="middle" fill="#9aa8b8" font-size="13">有什么可以帮你的？</text>
+
+  <rect x="820" y="320" width="260" height="62" rx="12" fill="#ffffff" stroke="#dbe3ec"/>
+  <text x="836" y="346" fill="#b9c4d2" font-size="11">接着那段关系说话就好</text>
+
+  <rect x="826" y="404" width="56" height="24" rx="12" fill="#ffffff" stroke="#dbe3ec"/>
+  <text x="854" y="420" text-anchor="middle" fill="#8b98a8" font-size="10.5">完全权限</text>
+
+  <rect x="888" y="404" width="118" height="24" rx="12" fill="#ecfdf5" stroke="#059669"/>
+  <text x="947" y="420" text-anchor="middle" fill="#059669" font-size="10.5" font-weight="700">身份：小鲸 · 画像 ▾</text>
+
+  <circle cx="1008" cy="396" r="14" fill="#059669"/>
+  <path d="M 1002 396 L 1006.5 400.5 L 1015 391.5" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="816" y="540" fill="#1f2937" font-size="12.5" font-weight="700">胶囊变成「身份：名字 · 档位」就成了。</text>
+  <text x="816" y="562" fill="#6b7280" font-size="11.5">之后说的话都会带着这份身份。</text>
+  <text x="816" y="584" fill="#6b7280" font-size="11.5">换档 / 换人 / 解绑：再点一次，免费。</text>
+
+  <!-- ===== Bottom ===== -->
+  <line x1="60" y1="650" x2="1140" y2="650" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="60" y="690" fill="#1f2937" font-size="17" font-weight="700">还没导入过？先做一张卡 —— 两种方式</text>
+
+  <rect x="60" y="710" width="520" height="120" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="80" y="738" fill="#1f2937" font-size="13" font-weight="700">A. 直接跟 AI 说</text>
+  <rect x="80" y="750" width="480" height="34" rx="8" fill="#1f2937"/>
+  <text x="94" y="772" class="mono" fill="#e5e7eb" font-size="11.5">帮我导入聊天记录 D:/chat.json，对面叫阿May</text>
+  <text x="80" y="808" fill="#6b7280" font-size="11.5">它会先给预估（几次调用、多少成本），确认后才提炼。</text>
+
+  <rect x="600" y="710" width="540" height="120" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="620" y="738" fill="#1f2937" font-size="13" font-weight="700">B. 用命令（一行到底）</text>
+  <rect x="620" y="750" width="500" height="34" rx="8" fill="#1f2937"/>
+  <text x="634" y="772" class="mono" fill="#e5e7eb" font-size="11.5">/identity + chat.json 阿May 小克</text>
+  <text x="620" y="808" fill="#6b7280" font-size="11.5">记录 / 对面 / 卡名，三个都给了就不再追问。</text>
+
+  <text x="60" y="872" fill="#6b7280" font-size="12">完整命令见 /identity help；导入格式、三档差别、盲判验收见 使用说明书.md。</text>
+
+  <text x="60" y="930" fill="#9aa8b8" font-size="12">图中界面为示意，按钮文字以你装的版本为准 —— 对不上就把截图发我，我按你的界面重画。</text>
+  <text x="1140" y="930" text-anchor="end" fill="#9aa8b8" font-size="12">dsh-conversation-identity</text>
+</svg>
