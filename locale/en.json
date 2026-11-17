@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Conversation Identity",
+    "description": "Import a chat log and rebuild the person on the other side as an identity card (voice, rhythm, judgement, rapport, plus verbatim anchors). Pick it when starting a new conversation and it carries that relationship on. Supports ChatGPT / Claude / DeepSeek exports, WeChat CSV and plain text; three strength tiers switch instantly with no re-distillation; includes blind replay scoring and full-text recall."
+  }
+}

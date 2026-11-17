@@ -1,0 +1,13 @@
+# dsh-conversation-identity bundle patch.
+# 安装本包后，profile 会把下面这条 loader 条目插进插件树，插件随即挂载。
+# 想改配置时，在 profile 的 cordis.patch.yml 里追加一条同 id 的覆盖项即可。
+# 注意：profile 里的覆盖是「整份替换 config」，不是深合并，所以要么不写 config、要么写全。
+#
+#   - id: conversation-identity
+#     config:
+#       defaultStrength: portrait
+#       provider: deepseek-account
+#       model: deepseek-flash
+- insert:
+    - id: conversation-identity
+      name: dsh-conversation-identity
