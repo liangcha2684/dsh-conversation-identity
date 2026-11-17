@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1020" viewBox="0 0 1200 1020" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif">
+  <defs>
+    <style>
+      .t { fill: #1f2937; }
+      .s { fill: #6b7280; }
+      .h1 { font-size: 40px; font-weight: 700; }
+      .h2 { font-size: 21px; font-weight: 700; }
+      .h3 { font-size: 17px; font-weight: 700; letter-spacing: .3px; }
+      .body { font-size: 15px; }
+      .small { font-size: 13px; }
+      .code { font-family: 'Cascadia Mono','Consolas','Courier New',monospace; font-size: 12px; fill: #e5e7eb; }
+    </style>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1020" fill="#f7f8fa"/>
+
+  <!-- Header -->
+  <text x="60" y="78" class="t h1">对话身份延续</text>
+  <text x="330" y="78" class="s" font-size="22">— 一张图看懂怎么用</text>
+  <text x="60" y="114" class="s body">导入一段聊天记录，把「聊天的对面」重建成可注入的身份卡：语气、节奏、思维、相处方式。</text>
+  <text x="60" y="138" class="s small">新建会话时选一下，这个会话就接着那段关系说话 —— 而且它主动承认自己是新一代。</text>
+
+  <!-- Step cards -->
+  <rect x="60" y="170" width="340" height="310" rx="14" fill="#ffffff" stroke="#e5e7eb" filter="url(#sh)"/>
+  <circle cx="102" cy="215" r="20" fill="#eff6ff"/>
+  <text x="102" y="221" text-anchor="middle" fill="#2563eb" font-size="17" font-weight="700">1</text>
+  <text x="136" y="222" class="t h2">装插件</text>
+  <rect x="84" y="256" width="292" height="62" rx="8" fill="#1f2937"/>
+  <text x="98" y="280" class="code">dsh plugin --profile desktop add \</text>
+  <text x="98" y="300" class="code">    dsh-conversation-identity</text>
+  <text x="84" y="348" class="s small">装完<b>完全退出</b> DeepSeek Harness 再打开。</text>
+  <text x="84" y="369" class="s small">服务端代码只在启动时加载，不重启会报 405。</text>
+  <text x="84" y="408" fill="#059669" class="small" font-weight="700">✓ 一条命令搞定，不用改配置文件</text>
+  <text x="84" y="434" class="s small">需要 DSH ≥ 0.2.1-rc.5</text>
+  <text x="84" y="458" class="s small">也可以从 GitHub Release 下 tgz 装。</text>
+
+  <path d="M 408 325 L 428 325" stroke="#cbd5e1" stroke-width="2.5" fill="none"/>
+  <path d="M 424 319 L 432 325 L 424 331" stroke="#cbd5e1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="430" y="170" width="340" height="310" rx="14" fill="#ffffff" stroke="#e5e7eb" filter="url(#sh)"/>
+  <circle cx="472" cy="215" r="20" fill="#eff6ff"/>
+  <text x="472" y="221" text-anchor="middle" fill="#2563eb" font-size="17" font-weight="700">2</text>
+  <text x="506" y="222" class="t h2">导入一段记录</text>
+  <text x="454" y="262" class="s small">三种入口，任选其一：</text>
+  <circle cx="460" cy="285" r="3.5" fill="#2563eb"/>
+  <text x="472" y="290" class="t small">直接说「帮我导入记录，对面叫阿May」</text>
+  <circle cx="460" cy="313" r="3.5" fill="#2563eb"/>
+  <text x="472" y="318" class="t small">/identity + 记录.json 阿May</text>
+  <circle cx="460" cy="341" r="3.5" fill="#2563eb"/>
+  <text x="472" y="346" class="t small">工具 identity_import({path})</text>
+  <rect x="454" y="362" width="292" height="38" rx="8" fill="#f1f5f9"/>
+  <text x="466" y="386" class="s small">先给「预估」：调几次模型、花多少</text>
+  <text x="454" y="428" class="s small">确认后才正式提炼，出身份卡。</text>
+  <text x="454" y="452" class="s small">支持 ChatGPT / Claude / DeepSeek 导出、</text>
+  <text x="454" y="472" class="s small">微信 CSV、带「名字:」标记的纯文本。</text>
+
+  <path d="M 778 325 L 798 325" stroke="#cbd5e1" stroke-width="2.5" fill="none"/>
+  <path d="M 794 319 L 802 325 L 794 331" stroke="#cbd5e1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="800" y="170" width="340" height="310" rx="14" fill="#ffffff" stroke="#e5e7eb" filter="url(#sh)"/>
+  <circle cx="842" cy="215" r="20" fill="#eff6ff"/>
+  <text x="842" y="221" text-anchor="middle" fill="#2563eb" font-size="17" font-weight="700">3</text>
+  <text x="876" y="222" class="t h2">新建会话选用</text>
+  <rect x="824" y="256" width="292" height="70" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="840" y="284" class="s small">空状态右下角会出现：</text>
+  <text x="840" y="308" fill="#2563eb" font-weight="700" font-size="15">身份：未导入  ▾</text>
+  <text x="824" y="360" class="s small">点开 → 选一张身份卡 → 直接开聊。</text>
+  <text x="824" y="404" class="t small" font-weight="700">切档、换身份、解绑：随时改，免费。</text>
+  <text x="824" y="430" class="s small">换档只是换注入投影，</text>
+  <text x="824" y="450" class="s small">不重新提炼、不花钱。</text>
+  <text x="824" y="474" class="s small">底色档不带记忆，画像/替身可带。</text>
+
+  <!-- Tier section -->
+  <text x="60" y="526" class="t h3">三档强度 —— 同一张卡的不同投影</text>
+  <rect x="60" y="542" width="340" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="80" y="572" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="15" font-weight="700">tone</text>
+  <text x="140" y="572" class="t body" font-weight="700">底色</text>
+  <text x="80" y="596" class="s small">称呼、正式度、句长、收尾方式</text>
+  <text x="330" y="598" fill="#059669" font-size="15" font-weight="700">≥45%</text>
+
+  <rect x="430" y="542" width="340" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="450" y="572" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="15" font-weight="700">portrait</text>
+  <text x="536" y="572" class="t body" font-weight="700">画像</text>
+  <text x="450" y="596" class="s small">+ 结构、口头禅、节奏、思维 + 关系记忆</text>
+  <text x="700" y="598" fill="#059669" font-size="15" font-weight="700">≥60%</text>
+
+  <rect x="800" y="542" width="340" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="820" y="572" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="15" font-weight="700">standin</text>
+  <text x="900" y="572" class="t body" font-weight="700">替身</text>
+  <text x="820" y="596" class="s small">+ 关系质感、全部原文锚点</text>
+  <text x="1070" y="598" fill="#059669" font-size="15" font-weight="700">≥70%</text>
+
+  <text x="60" y="650" class="s small">百分比是「回放盲判」的通过线：把真实原句和模仿生成混排，让裁判指认 —— 猜不出来才叫像。</text>
+
+  <!-- Commands -->
+  <text x="60" y="700" class="t h3">命令速查</text>
+  <rect x="60" y="716" width="1080" height="212" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+
+  <text x="84" y="750" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="13.5" font-weight="700">/identity</text>
+  <text x="340" y="750" class="s small">看当前绑定状态</text>
+  <text x="84" y="780" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="13.5" font-weight="700">/identity list</text>
+  <text x="340" y="780" class="s small">列出全部身份卡</text>
+  <text x="84" y="810" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="13.5" font-weight="700">/identity use &lt;id&gt; portrait</text>
+  <text x="340" y="810" class="s small">切到某张卡 / 某一档</text>
+  <text x="84" y="840" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="13.5" font-weight="700">/identity off</text>
+  <text x="340" y="840" class="s small">解绑（数据不删）</text>
+  <text x="84" y="870" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="13.5" font-weight="700">/identity + &lt;文件&gt; &lt;对面&gt; &lt;卡名&gt;</text>
+  <text x="340" y="870" class="s small">一行完成导入</text>
+  <text x="84" y="900" fill="#2563eb" font-family="'Cascadia Mono','Consolas',monospace" font-size="13.5" font-weight="700">/identity show | replay | reanchor | forget</text>
+  <text x="470" y="900" class="s small">看卡 / 盲判 / 补锚点 / 删除</text>
+
+  <text x="680" y="750" class="t small" font-weight="700">三个常用工具（让 AI 帮你调）</text>
+  <text x="680" y="780" font-family="'Cascadia Mono','Consolas',monospace" font-size="13" fill="#475569">identity_import</text>
+  <text x="860" y="780" class="s small">导入一段记录</text>
+  <text x="680" y="810" font-family="'Cascadia Mono','Consolas',monospace" font-size="13" fill="#475569">identity_use</text>
+  <text x="860" y="810" class="s small">绑定 / 换档</text>
+  <text x="680" y="840" font-family="'Cascadia Mono','Consolas',monospace" font-size="13" fill="#475569">identity_recall</text>
+  <text x="860" y="840" class="s small">翻原文，零成本</text>
+  <text x="680" y="870" font-family="'Cascadia Mono','Consolas',monospace" font-size="13" fill="#475569">identity_replay</text>
+  <text x="860" y="870" class="s small">回放盲判打分</text>
+
+  <!-- Footer -->
+  <text x="60" y="972" class="s small">github.com/liangcha2684/dsh-conversation-identity</text>
+  <text x="620" y="972" class="s small">npm i dsh-conversation-identity</text>
+  <text x="960" y="972" class="s small">详细玩法见包内 使用说明书.md</text>
+</svg>
