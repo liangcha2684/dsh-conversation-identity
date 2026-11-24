@@ -1,6 +1,6 @@
 {
   "name": "dsh-conversation-identity",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "对话身份延续：导入一段聊天记录，把「聊天的对面」重建成可注入的身份卡（语气 / 节奏 / 思维 / 相处方式），新建会话时选用即可无缝接着聊。支持平台导出、微信 CSV 与纯文本，三档强度，带回放盲判验收与原文检索。",
   "type": "module",
   "main": "lib/index.js",

@@ -211,10 +211,10 @@ test('三档渲染：字段随档位递增，且都带硬底线', () => {
   const portrait = renderIdentity(card, { strength: 'portrait' });
   const standin = renderIdentity(card, { strength: 'standin', memory: [{ text: '他说过下周三上线' }] });
   assert.ok(tone.includes('波波'));
-  assert.ok(!tone.includes('怎么下判断'), '底色档不该注入思维字段');
-  assert.ok(portrait.includes('怎么下判断'));
+  assert.ok(!tone.includes('我下判断'), '底色档不该注入思维字段');
+  assert.ok(portrait.includes('我下判断'), '画像档用第一人称直陈，不是「怎么下判断：」这种规格表');
   assert.ok(portrait.length > tone.length);
-  assert.ok(standin.includes('原话锚点'));
+  assert.ok(standin.includes('我说过的话'));
   assert.ok(standin.includes('下周三上线'));
   assert.ok(standin.length > portrait.length);
   for (const text of [tone, portrait, standin]) {
@@ -322,6 +322,13 @@ test('实测风格指标：长度分布、版式与动作密度能进卡', () =>
   assert.ok(card.turnLength.startsWith('长；实测：单条中位'), '实测值要接在模型描述后面，不能覆盖');
   assert.ok(card.structure.includes('实测：'));
   assert.deepEqual(card.metrics, metrics);
+
+  // 幂等：导入追加来源 / 合并 / reanchor 都会再跑一次，重复追加会让「实测」越叠越长。
+  const again = applyMetricsToCard(applyMetricsToCard(card, metrics), metrics);
+  assert.equal(again.turnLength, card.turnLength, '重复跑不能让「实测」叠加');
+  assert.equal(again.structure, card.structure);
+  assert.equal(again.punctuation, card.punctuation);
+  assert.ok(!/实测：[^；]*；实测：/.test(again.structure), '同一段里不该出现两次「实测：」');
 });
 
 // ── 原文检索 ──────────────────────────────────────────────────────────────

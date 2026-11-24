@@ -131,12 +131,17 @@ test('identity_list 在没有身份时也能正常返回', async () => {
   }
 });
 
-test('三档注入文本长度单调递增且都非空', () => {
+test('三档注入：字段数随档位递增，且都非空', () => {
   const card = normalizeCard({ addressToUser: '波波', register: '随意', sentence: '短句为主', closing: '给结论', judgment: '先给结论', relationship: '同事式互怼' }, { identityId: 'id-1', name: '小克' });
   const tone = renderIdentity(card, { strength: 'tone' });
   const portrait = renderIdentity(card, { strength: 'portrait' });
   const standin = renderIdentity(card, { strength: 'standin' });
-  assert.ok(tone.length > 0 && portrait.length > tone.length && standin.length > portrait.length);
+  assert.ok(tone.length > 0 && portrait.length > 0 && standin.length > 0);
+  // 画像档刻意不写指令句（祈使句会让模型去「表演」人格，见 README「人格要像回忆，不像规格」），
+  // 所以字数不再是可靠指标；真正该单调递增的是**注入的字段条数**。
+  const fieldBullets = (text) => (text.match(/^- (?:我|他叫我)/gm) ?? []).length;
+  assert.ok(fieldBullets(tone) < fieldBullets(portrait), `tone ${fieldBullets(tone)} → portrait ${fieldBullets(portrait)}`);
+  assert.ok(fieldBullets(portrait) < fieldBullets(standin), `portrait ${fieldBullets(portrait)} → standin ${fieldBullets(standin)}`);
 });
 
 test('/identity + 向导：先问对面是谁，答完再问名字，可取消', async () => {

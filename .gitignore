@@ -3,6 +3,11 @@ node_modules/
 dist/
 *.tgz
 
+# 备份文件（曾误打进 npm 包：lib/ 整个都在 files 里，*.bak 要拦住）
+*.bak
+*.bak-*
+*.orig
+
 # 日志与临时文件
 *.log
 npm-debug.log*
